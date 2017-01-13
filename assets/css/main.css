@@ -7,6 +7,7 @@
  */
 /* Document
    ========================================================================== */
+@import url("https://fonts.googleapis.com/css?family=Fira+Sans:400,400i");
 html {
   font-family: sans-serif;
   /* 1 */
@@ -482,7 +483,7 @@ body {
   background: #F6F6F8;
   font-size: 14px;
   line-height: 1.6;
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'Fira Sans', sans-serif;
   color: #2D2D33;
   -webkit-font-smoothing: antialiased;
   -webkit-text-size-adjust: 100%; }
