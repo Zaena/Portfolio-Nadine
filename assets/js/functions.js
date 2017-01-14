@@ -61,11 +61,10 @@ function startBeoordelingen() {
 
   var wScroll = $(window).scrollTop();
 
-  if($('section.beoordelingen').offset().top - 400 < wScroll) {
+  if($('section.beoordelingen').offset().top - $(window).height()/2 < wScroll) {
     if($(window).width() > 640) {
     $('.faces').addClass('launched');
-
-      if(!$('.face').hasClass('has-bubble-open') && $this.hasClass('back-btn')){
+      if(!$('.face').hasClass('has-bubble-open')){
         setTimeout(function(){
 
           $('.face:nth-child(3)').addClass('has-bubble-open');
