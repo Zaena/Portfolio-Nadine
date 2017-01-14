@@ -679,7 +679,9 @@ section.about {
 
 @media (max-width: 640px) {
   section.about {
-    background-position: 20% center; }
+    background-size: auto 100%;
+    background-position: 20%;
+    background-repeat: no-repeat; }
     section.about h2, section.about .home-lead {
       margin-left: auto;
       margin-right: auto;
@@ -741,7 +743,7 @@ section.beoordelingen {
   section.beoordelingen .home-cta {
     color: #8da3cb; }
   section.beoordelingen .home-lead {
-    margin-top: 250px; }
+    margin-top: 300px; }
   section.beoordelingen .faces {
     list-style: none;
     margin: -50px 0;
@@ -762,6 +764,8 @@ section.beoordelingen {
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.4);
     position: relative;
     cursor: pointer; }
+    section.beoordelingen .face:first-child {
+      margin-top: 35px; }
     section.beoordelingen .face.back-btn {
       background: white url(../img/back-icon.svg) center no-repeat;
       background-size: 15px 26px;
@@ -789,6 +793,8 @@ section.beoordelingen {
             transform: scale(1); }
 
 @media (max-width: 640px) {
+  section.beoordelingen .home-lead {
+    margin-top: 230px; }
   section.beoordelingen .faces {
     margin: 0;
     width: 805px;
@@ -804,6 +810,60 @@ section.beoordelingen {
     left: 0px;
     box-sizing: border-box;
     margin-left: 0px; } }
+
+section.verslagen {
+  background-image: url(../img/verslagen-bg.jpg);
+  background-repeat: repeat; }
+  section.verslagen .col-1 {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: center;
+        align-items: center; }
+  section.verslagen .home-cta {
+    color: white;
+    background: #5f94b6; }
+  section.verslagen .article-wrap {
+    margin: -50px 0; }
+    section.verslagen .article-wrap::after {
+      clear: both;
+      content: "";
+      display: table; }
+  section.verslagen .article-thumb {
+    display: block;
+    background-size: cover;
+    background-position: center;
+    width: 25%;
+    float: left;
+    position: relative;
+    overflow: hidden; }
+    section.verslagen .article-thumb:after {
+      content: '';
+      display: block;
+      padding-top: 100%; }
+  section.verslagen .article-meta {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(95, 148, 182, 0.8);
+    color: #fff;
+    padding: 10px;
+    -webkit-transform: translateY(100%) scale(0.5);
+            transform: translateY(100%) scale(0.5);
+    transition: all 0.2s ease-in-out;
+    opacity: 0; }
+    section.verslagen .article-meta .name {
+      font-size: 18px; }
+    section.verslagen .article-meta .date {
+      font-style: italic; }
+  section.verslagen .article-thumb:hover .article-meta {
+    opacity: 1;
+    -webkit-transform: translateY(0%) scale(1);
+            transform: translateY(0%) scale(1); }
+  @media (max-width: 640px) {
+    section.verslagen .desc-wrap {
+      margin-top: 50px; } }
 
 .home-wrap {
   display: -ms-flexbox;
