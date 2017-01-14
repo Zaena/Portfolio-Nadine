@@ -1,0 +1,23 @@
+mixin nav-content()
+  ul
+    li: a(href="#over") Over
+    li: a(href="#videos") Videos
+    li: a(href="#beoordelingen") Beoordelingen
+    li: a(href="#verslagen") Verslagen
+    li: a(href="#lesplannen") Lesplannen
+    li: a(href="#competenties") Competenties
+    li: a(href="#contact") Contact
+
+.mobile-nav
+  +nav-content()
+
+header
+  .header-position
+    h1.logo Nadine Ahmadali
+    
+    nav.site-nav
+      +nav-content()
+
+    a(href="mailto:nadine@email.com").email-link +email me
+    
+    .mobile-nav-toggle: span
