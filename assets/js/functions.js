@@ -1,5 +1,6 @@
 $(function(){
   beoordelingenBubbleClick();
+  setInterval(function(){verslagenTada()},4000);
   mobileNav();
 });
 
@@ -13,6 +14,13 @@ function mobileNav() {
 
   });
 
+}
+
+function verslagenTada() {
+  var randNum = Math.floor(Math.random() * $('.article-thumb').length) +1
+
+  $('.article-thumb').eq(randNum).addClass('is-emph')
+    .siblings().removeClass('is-emph');
 }
 
 function beoordelingenBubbleClick() {

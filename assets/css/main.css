@@ -836,6 +836,14 @@ section.verslagen {
     float: left;
     position: relative;
     overflow: hidden; }
+    section.verslagen .article-thumb.is-emph {
+      -webkit-animation-name: tada;
+              animation-name: tada;
+      -webkit-animation-duration: 1s;
+              animation-duration: 1s;
+      -webkit-animation-fill-mode: both;
+              animation-fill-mode: both;
+      z-index: 1; }
     section.verslagen .article-thumb:after {
       content: '';
       display: block;
@@ -854,7 +862,8 @@ section.verslagen {
     transition: all 0.2s ease-in-out;
     opacity: 0; }
     section.verslagen .article-meta .name {
-      font-size: 18px; }
+      font-size: 18px;
+      line-height: 1.2; }
     section.verslagen .article-meta .date {
       font-style: italic; }
   section.verslagen .article-thumb:hover .article-meta {
@@ -864,6 +873,43 @@ section.verslagen {
   @media (max-width: 640px) {
     section.verslagen .desc-wrap {
       margin-top: 50px; } }
+  @media (max-width: 1000px) and (mind-width: 640px) {
+    section.verslagen .article-thumb {
+      width: 33.33%; } }
+
+@-webkit-keyframes tada {
+  from {
+    -webkit-transform: scale3d(1, 1, 1);
+            transform: scale3d(1, 1, 1); }
+  10%, 20% {
+    -webkit-transform: scale3d(0.9, 0.9, 0.9) rotate3d(0, 0, 1, -3deg);
+            transform: scale3d(0.9, 0.9, 0.9) rotate3d(0, 0, 1, -3deg); }
+  30%, 50%, 70%, 90% {
+    -webkit-transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, 3deg);
+            transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, 3deg); }
+  40%, 60%, 80% {
+    -webkit-transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, -3deg);
+            transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, -3deg); }
+  to {
+    -webkit-transform: scale3d(1, 1, 1);
+            transform: scale3d(1, 1, 1); } }
+
+@keyframes tada {
+  from {
+    -webkit-transform: scale3d(1, 1, 1);
+            transform: scale3d(1, 1, 1); }
+  10%, 20% {
+    -webkit-transform: scale3d(0.9, 0.9, 0.9) rotate3d(0, 0, 1, -3deg);
+            transform: scale3d(0.9, 0.9, 0.9) rotate3d(0, 0, 1, -3deg); }
+  30%, 50%, 70%, 90% {
+    -webkit-transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, 3deg);
+            transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, 3deg); }
+  40%, 60%, 80% {
+    -webkit-transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, -3deg);
+            transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, -3deg); }
+  to {
+    -webkit-transform: scale3d(1, 1, 1);
+            transform: scale3d(1, 1, 1); } }
 
 .home-wrap {
   display: -ms-flexbox;

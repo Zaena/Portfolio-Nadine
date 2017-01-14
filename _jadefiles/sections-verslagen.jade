@@ -9,18 +9,12 @@ section.verslagen
         
     .col-50
       .article-wrap
-         +thumb("assets/img/verslagen/thumb1.jpg", "Verslag 1", "Dec 10, 2016")
-         +thumb("assets/img/verslagen/thumb2.jpg", "Verslag 2", "Dec 10, 2016")
-         +thumb("assets/img/verslagen/thumb3.jpg", "Verslag 3", "Dec 10, 2016")
-         +thumb("assets/img/verslagen/thumb4.jpg", "Verslag 4", "Dec 10, 2016")
-         +thumb("assets/img/verslagen/thumb5.jpg", "Verslag 5", "Dec 10, 2016")
-         +thumb("assets/img/verslagen/thumb6.jpg", "Verslag 6", "Dec 10, 2016")
-         +thumb("assets/img/verslagen/thumb7.jpg", "Verslag 7", "Dec 10, 2016")
-         +thumb("assets/img/verslagen/thumb8.jpg", "Verslag 8", "Dec 10, 2016")
-         +thumb("assets/img/verslagen/thumb9.jpg", "Verslag 9", "Dec 10, 2016")
-         +thumb("assets/img/verslagen/thumb10.jpg", "Verslag 10", "Dec 10, 2016")
-         +thumb("assets/img/verslagen/thumb11.jpg", "Verslag 11", "Dec 10, 2016")
-         +thumb("assets/img/verslagen/thumb12.jpg", "Verslag 12", "Dec 10, 2016")
+        {% for post in site.posts limit: 12 %}
+        a(href="{{post.url}}" target="_blank" style="background-image: url(assets/img/posts/thumbnails/{{post.thumbnail}})").article-thumb
+          .article-meta
+            .name {{post.title}}
+            .date {{ post.date | date: "%b %d, %Y" }}
+        {% endfor %}
 
     .col-50.flex.flex--center.order-first
       .col-1

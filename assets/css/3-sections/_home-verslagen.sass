@@ -25,6 +25,12 @@ section.verslagen
     position: relative
     overflow: hidden
 
+    &.is-emph
+      animation-name: tada
+      animation-duration: 1s
+      animation-fill-mode: both
+      z-index: 1
+
     &:after
       content: ''
       display: block
@@ -45,6 +51,7 @@ section.verslagen
 
     .name
       font-size: 18px
+      line-height: 1.2
 
     .date
       font-style: italic
@@ -56,3 +63,23 @@ section.verslagen
   @media (max-width: 640px)
     .desc-wrap
       margin-top: 50px
+
+  @media (max-width: 1000px) and (mind-width: 640px)
+    .article-thumb
+      width: 33.33%
+
+@keyframes tada
+  from
+    transform: scale3d(1, 1, 1)
+
+  10%, 20%
+    transform: scale3d(.9, .9, .9) rotate3d(0, 0, 1, -3deg)
+
+  30%, 50%, 70%, 90%
+    transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, 3deg)
+
+  40%, 60%, 80%
+    transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, -3deg)
+
+  to
+    transform: scale3d(1, 1, 1)
