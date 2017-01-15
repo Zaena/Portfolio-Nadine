@@ -1,4 +1,4 @@
-mixin thumb(thumb, name, date)
+mixin thumb(thumb, name, date, color)
   a(href="" style="background-image: url(#{thumb})").lesplan-thumb
     .article-meta
       .name #{name}
@@ -12,7 +12,7 @@ section.lesplannen
         {% for post in site.posts limit: 4 %}
         a(href="{{post.url}}" target="_blank" style="background-image: url(assets/img/posts/lesplannen/thumbnails/{{post.thumbnail}})").lesplan-thumb
           .article-meta
-            .name {{post.title}}
+            .name {{ post.title }}
             .date {{ post.date | date: "%b %d, %Y" }}
         {% endfor %}
         
