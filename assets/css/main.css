@@ -876,6 +876,8 @@ section.verslagen {
             transform: translateY(0%) scale(1); }
   @media (max-width: 640px) {
     section.verslagen .desc-wrap {
+      margin-top: 50px; }
+    section.verslagen .home-lead {
       margin-top: 50px; } }
   @media (max-width: 1000px) and (mind-width: 640px) {
     section.verslagen .article-thumb {
@@ -981,6 +983,8 @@ section.lesplannen {
             transform: translateX(0%) scale(1); }
   @media (max-width: 640px) {
     section.lesplannen .desc-wrap {
+      margin-top: 50px; }
+    section.lesplannen .home-lead {
       margin-top: 50px; } }
   @media (max-width: 1000px) and (mind-width: 640px) {
     section.lesplannen .lesplan-thumb {
