@@ -1,19 +1,16 @@
-mixin thumb(thumb, name, date)
-  a(href="" style="background-image: url(#{thumb})").article-thumb
-    .article-meta
-      .name #{name}
-      .date #{date}
-
 section.verslagen
   .flex.flex--center
         
     .col-50
       .article-wrap
         {% for post in site.posts limit: 12 %}
-        a(href="{{post.url}}" target="_blank" style="background-image: url(assets/img/posts/verslagen/thumbnails/{{post.thumbnail}})").article-thumb
+        {% assign first_dir = post.path | remove_first: "_posts/" | split: "/" | first %}
+        {% if first_dir == 'verslagen' %}
+        a(href="{{ post.url }}" target="_blank" style="background-image: url(assets/img/posts/verslagen/thumbnails/{{post.thumbnail}})").article-thumb
           .article-meta
             .name {{post.title}}
             .date {{ post.date | date: "%b %d, %Y" }}
+        {% endif %}
         {% endfor %}
 
     .col-50.flex.flex--center.order-first
