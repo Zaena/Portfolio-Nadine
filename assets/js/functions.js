@@ -58,6 +58,7 @@ $(window).scroll(function(){
   videosVidScroll();
   startBeoordelingen();
   startVerslagen();
+  startLesplannen();
 });
 
 function videosVidScroll() {
@@ -77,6 +78,19 @@ function startVerslagen() {
     });
   }
 }
+
+function startLesplannen() {
+  var wScroll = $(window).scrollTop();
+
+  if($('section.lesplannen').offset().top - $(window).height()/2 < wScroll) {
+    $('.lesplan-thumb').each(function(i){
+      setTimeout(function(){
+        $('.lesplan-thumb').eq(i).addClass('is-visible');
+      }, 100 * i);
+    });
+  }
+}
+
 function startBeoordelingen() {
 
   var wScroll = $(window).scrollTop();

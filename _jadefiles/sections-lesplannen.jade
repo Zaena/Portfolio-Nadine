@@ -1,0 +1,23 @@
+mixin thumb(thumb, name, date)
+  a(href="" style="background-image: url(#{thumb})").lesplan-thumb
+    .article-meta
+      .name #{name}
+      .date #{date}
+
+section.lesplannen
+  .flex.flex--center
+        
+    .col-50
+      .article-wrap.order-first
+        {% for post in site.posts limit: 4 %}
+        a(href="{{post.url}}" target="_blank" style="background-image: url(assets/img/posts/lesplannen/thumbnails/{{post.thumbnail}})").lesplan-thumb
+          .article-meta
+            .name {{post.title}}
+            .date {{ post.date | date: "%b %d, %Y" }}
+        {% endfor %}
+        
+    .col-50.flex.flex--center
+      .col-1
+        .desc-wrap
+          p.home-lead.outdented ...de lesplannen die ze heeft gemaakt...
+          a(href="").home-cta Lees alle lesplannen
