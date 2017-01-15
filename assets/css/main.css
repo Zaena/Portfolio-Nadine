@@ -519,6 +519,17 @@ svg {
   .home-cta:hover {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4); }
 
+.home-cta-lesplannen {
+  font-size: 28px;
+  display: block;
+  background: white;
+  text-align: center;
+  padding: 0.4em 0;
+  line-height: 1.25;
+  transition: all 0.15s ease-in-out; }
+  .home-cta-lesplannen:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4); }
+
 .flex-video {
   height: 0;
   overflow: hidden;
@@ -918,15 +929,16 @@ section.verslagen {
             transform: scale3d(1, 1, 1); } }
 
 section.lesplannen {
-  background-image: url(../img/lesplannen-bg.jpg);
+  background-color: #00bf8f;
   background-size: cover;
-  color: #fff; }
+  color: #fff;
+  transition: all 250ms ease-in-out; }
   section.lesplannen .col-1 {
     display: -ms-flexbox;
     display: flex;
     -ms-flex-align: center;
         align-items: center; }
-  section.lesplannen .home-cta {
+  section.lesplannen .home-cta-lesplannen {
     color: #00bf8f;
     background: #fff; }
   section.lesplannen .article-wrap {
@@ -944,7 +956,7 @@ section.lesplannen {
     position: relative;
     overflow: hidden;
     opacity: 0;
-    transition: all 300ms ease-in-out; }
+    transition: all 200ms ease-in-out; }
     section.lesplannen .lesplan-thumb.is-visible {
       opacity: 1; }
     section.lesplannen .lesplan-thumb.is-emph {
@@ -959,25 +971,25 @@ section.lesplannen {
       content: '';
       display: block;
       padding-top: 300%; }
-  section.lesplannen .article-meta {
+  section.lesplannen .lesplan-meta {
     position: absolute;
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
     background: rgba(0, 191, 143, 0.8);
-    color: #fff;
+    color: #000;
     padding: 10px;
     -webkit-transform: translateX(-100%) scale(0.5);
             transform: translateX(-100%) scale(0.5);
     transition: all 0.2s ease-in-out;
     opacity: 0; }
-    section.lesplannen .article-meta .name {
+    section.lesplannen .lesplan-meta .name {
       font-size: 18px;
       line-height: 1.2; }
-    section.lesplannen .article-meta .date {
+    section.lesplannen .lesplan-meta .date {
       font-style: italic; }
-  section.lesplannen .lesplan-thumb:hover .article-meta {
+  section.lesplannen .lesplan-thumb:hover .lesplan-meta {
     opacity: 1;
     -webkit-transform: translateX(0%) scale(1);
             transform: translateX(0%) scale(1); }

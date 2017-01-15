@@ -2,7 +2,7 @@ $(function(){
   beoordelingenBubbleClick();
   setInterval(function(){verslagenTada()},4000);
   mobileNav();
-  // lesplannenBGStuff();
+  lesplannenBGStuff();
 });
 
 function mobileNav() {
@@ -17,19 +17,22 @@ function mobileNav() {
 
 }
 
-// function lesplannenBGStuff() {
-//
-//   $('.lesplan-thumb').hover(function(){
-//
-//     $(this).parent().parent().css('background-color', $(this).data('color'));
-//
-//   }, function(){
-//
-//
-//
-//   });
-//
-// }
+function lesplannenBGStuff() {
+
+  $('.lesplan-thumb').hover(function(){
+
+    $(this).parent().parent().parent().parent().css('background-color', $(this).data('color'));
+    $('.home-cta-lesplannen').css('color', $(this).data('color'));
+    $('.lesplan-meta').css('background-color', $(this).data('color'));
+
+  }, function(){
+
+    $(this).parent().parent().parent().parent().css('background-color', $(this).parent().parent().parent().parent().data('orig-color'));
+    $('.home-cta-lesplannen').css('color', $(this).parent().parent().parent().parent().data('orig-color'));
+
+  });
+
+}
 
 function verslagenTada() {
   var randNum = Math.floor(Math.random() * $('.article-thumb').length) +1
