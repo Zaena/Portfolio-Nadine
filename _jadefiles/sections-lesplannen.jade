@@ -3,14 +3,11 @@ section.lesplannen
         
     .col-50.order-first
       .article-wrap
-        {% for post in site.posts limit: 4 %}
-        {% assign first_dir = post.path | remove_first: "_posts/" | split: "/" | first %}
-        {% if first_dir == 'lesplannen' %}
+        {% for post in site.categories.lesplannen limit: 4 %}
         a(href="{{ post.url }}" target="_blank" style="background-image: url(assets/img/posts/lesplannen/thumbnails/{{post.thumbnail}})").lesplan-thumb
           .article-meta
             .name {{post.title}}
             .date {{ post.date | date: "%b %d, %Y" }}
-        {% endif %}
         {% endfor %}
         
     .col-50.flex.flex--center

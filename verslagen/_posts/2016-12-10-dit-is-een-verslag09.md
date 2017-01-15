@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Dit Is Een Verslag Titel
+title: Dit Is Verslag 9
 thumbnail: thumb9.jpg
 ---
 
