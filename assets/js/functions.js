@@ -57,6 +57,7 @@ function beoordelingenBubbleClick() {
 $(window).scroll(function(){
   videosVidScroll();
   startBeoordelingen();
+  startVerslagen();
 });
 
 function videosVidScroll() {
@@ -65,6 +66,17 @@ function videosVidScroll() {
   $('.video-strip').css('background-position','center -'+ wScroll +'px');
 }
 
+function startVerslagen() {
+  var wScroll = $(window).scrollTop();
+
+  if($('section.verslagen').offset().top - $(window).height()/2 < wScroll) {
+    $('.article-thumb').each(function(i){
+      setTimeout(function(){
+        $('.article-thumb').eq(i).addClass('is-visible');
+      }, 100 * i);
+    });
+  }
+}
 function startBeoordelingen() {
 
   var wScroll = $(window).scrollTop();
