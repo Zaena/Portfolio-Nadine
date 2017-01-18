@@ -574,6 +574,7 @@ svg {
     background-image: url(../img/logo.svg);
     background-position: center;
     background-size: contain;
+    background-repeat: no-repeat;
     height: 80px;
     padding: 0;
     margin: 0; }
