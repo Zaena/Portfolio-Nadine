@@ -4,7 +4,7 @@ section.lesplannen(data-orig-color="#00bf8f")#lesplannen
     .col-50.order-first
       .article-wrap
         {% for post in site.categories.lesplannen limit: 4 %}
-        a(href="/lesplannen/_posts/{{ post.url }}" target="_blank" style="background-image: url(assets/img/posts/lesplannen/thumbnails/{{post.thumbnail}})" data-color="{{post.color}}").lesplan-thumb
+        a(href="{{ post.url }}" target="_blank" style="background-image: url(assets/img/posts/lesplannen/thumbnails/{{post.thumbnail}})" data-color="{{post.color}}").lesplan-thumb
           .lesplan-meta(data-color="{{post.color}}")
             .name {{post.title}}
             .date {{ post.date | date: "%b %d, %Y" }}
