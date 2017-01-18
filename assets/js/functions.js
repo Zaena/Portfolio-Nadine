@@ -101,6 +101,7 @@ function videosVidScroll() {
   var wScroll = $(window).scrollTop();
 
   $('.video-strip').css('background-position','center -'+ wScroll +'px');
+  
 }
 
 function startVerslagen() {

@@ -1081,7 +1081,8 @@ section.bericht {
       height: 60px;
       width: 100%;
       padding: 50px 10px;
-      font-size: 18px; }
+      font-size: 18px;
+      color: white; }
       section.bericht .form-display textarea:focus {
         outline: none; }
     section.bericht .form-display label {
