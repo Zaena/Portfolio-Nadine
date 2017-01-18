@@ -4,7 +4,7 @@ section.verslagen#verslagen
     .col-50
       .article-wrap
         {% for post in site.categories.verslagen limit: 12 %}
-        a(href="{{ post.url }}" target="_blank" style="background-image: url(assets/img/posts/verslagen/thumbnails/{{post.thumbnail}})").article-thumb
+        a(href="{{ site.baseurl }}{{ post.url }}" target="_blank" style="background-image: url(assets/img/posts/verslagen/thumbnails/{{post.thumbnail}})").article-thumb
           .article-meta
             .name {{post.title}}
             .date {{ post.date | date: "%b %d, %Y" }}
